@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шамшод | Junior Python & Frontend Разработчик</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://googleapis.com">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">SHAMSHOD.DEV</div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-container" id="navContainer">
+            <nav class="menu">
+                <a href="#about" class="lang-ru" onclick="toggleMenu()">Обо мне</a>
+                <a href="#about" class="lang-uz" onclick="toggleMenu()">Men haqimda</a>
+
+                <a href="#skills" class="lang-ru" onclick="toggleMenu()">Навыки</a>
+                <a href="#skills" class="lang-uz" onclick="toggleMenu()">Ko'nikmalar</a>
+
+                <a href="#projects" class="lang-ru" onclick="toggleMenu()">Проекты</a>
+                <a href="#projects" class="lang-uz" onclick="toggleMenu()">Loyihalar</a>
+            </nav>
+            <div class="lang-switch">
+                <button onclick="setLang('ru')">RU</button>
+                <button onclick="setLang('uz')">UZ</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран -->
+        <section class="hero">
+            <div class="hero-text">
+                <span class="subtitle lang-ru">Добро пожаловать</span>
+                <span class="subtitle lang-uz">Xush kelibsiz</span>
+
+                <h1>Привет, я Шамшодбек</h1>
+
+                <p class="description lang-ru">Junior Fullstack-разработчик. Мне 13 лет, я пишу чистый код на Python (Flask) и создаю адаптивные, стильные сайты для реального бизнеса.</p>
+                <p class="description lang-uz">Junior Fullstack dasturchi. Yoshim 13 da, Python (Flask) tilida toza kod yozaman va real biznes uchun moslashuvchan, zamonaviy saytlar yarataman.</p>
+
+                <a href="#projects" class="btn lang-ru">Посмотреть работы</a>
+                <a href="#projects" class="btn lang-uz">Ishlarni ko'rish</a>
+            </div>
+
+            <!-- Фотография на главном экране (РЕГИСТР JPG ИСПРАВЛЕН) -->
+            <div class="hero-image">
+                <div class="frame"></div>
+                <img src="static/img/IMG_6092.jpg" alt="Шамшодбек" class="photo">
+            </div>
+        </section>
+
+        <!-- Обо мне -->
+        <section id="about" class="section">
+            <h2 class="lang-ru">Мой бэкграунд</h2>
+            <h2 class="lang-uz">Mening tajribam</h2>
+            <div class="line"></div>
+
+            <div class="about-container">
+                <div class="about-image-block">
+                    <img src="static/img/photo_2026-07-20_02-19-55.jpg" alt="Второе фото" class="about-photo">
+                </div>
+                <div class="about-text-block">
+                    <p class="lang-ru">Изучаю программирование уже больше 4 лет. Прошел серьезное обучение на платформе GeekBrains, где освоил базовые алгоритмы и логику разработки. Недавно успешно прошел строгий отбор в программу Najot Ta’lim Start Junior, обогнав план отбора по возрасту.</p>
+                    <p class="lang-uz">Dasturlashni o'rganayotganimga 4 yildan oshdi. GeekBrains platformasida jiddiy ta'lim olib, u yerda asosiy algoritmlar va dasturlash mantiqini o'zlashtirdim. Yaqinda yosh bo'yicha saralash rejasidan o'tib, Najot Ta’lim Start Junior dasturiga muvaffaqiyatli qabul qilindim.</p>
+
+                    <div class="stats">
+                        <div class="stat-card">
+                            <h3>4+</h3>
+                            <p class="lang-ru">4 года опыта</p>
+                            <p class="lang-uz">4 yillik tajriba</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>1</h3>
+                            <p class="lang-ru">Проданный проект</p>
+                            <p class="lang-uz">Sotilgan loyiha</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Навыки -->
+        <section id="skills" class="section bg-light">
+            <h2 class="lang-ru">Технологии и навыки</h2>
+            <h2 class="lang-uz">Texnologiyalar va ko'nikmalar</h2>
+            <div class="line"></div>
+            <div class="skills-grid">
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">Flask</div>
+                <div class="skill-tag">HTML5 / CSS3</div>
+                <div class="skill-tag">Адаптивная верстка</div>
+                <div class="skill-tag">Git / GitHub</div>
+                <div class="skill-tag">Render Cloud Deployment</div>
+            </div>
+        </section>
+
+        <!-- Проекты -->
+        <section id="projects" class="section">
+            <h2>Мои работы</h2>
+            <div class="line"></div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="lang-ru">Сайт косметолога Sattarova</h3>
+                    <h3 class="lang-uz">Kosmetolog Sattarova sayti</h3>
+
+                    <p class="lang-ru">Полноценный коммерческий сайт-визитка, созданный под ключ для реального бьюти-специалиста. Написан на серверном фреймворке Flask, имеет адаптивный дизайн и полностью развернут в сети.</p>
+                    <p class="lang-uz">Haqiqiy go'zallik mutaxassisi uchun to'liq tayxonlangan tijoriy sayt-tashrif qog'ozi. Flask server freymvorkida yozilgan, moslashuvchan dizaynga ega va tarmoqqa to'liq joylashtirilgan.</p>
+
+                    <div class="project-links">
+                        <a href="https://cosmetolog-sattarova.onrender.com/" target="_blank" class="project-btn link-live lang-ru">Открыть сайт</a>
+                        <a href="https://cosmetolog-sattarova.onrender.com/" target="_blank" class="project-btn link-live lang-uz">Saytni ochish</a>
+
+                        <a href="https://github.com/shamshod909/cosmetolog-sattarova" target="_blank" class="project-btn link-git lang-ru">Код на GitHub</a>
+                        <a href="https://github.com/shamshod909/cosmetolog-sattarova" target="_blank" class="project-btn link-git lang-uz">GitHub'dagi kod</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="lang-ru">© 2026 Shamshod. Все права защищены. Код открыт для менторов.</p>
+        <p class="lang-uz">© 2026 Shamshod. Barcha huquqlar himoyalangan. Kod mentorlar...очищен для менторов.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navContainer').classList.toggle('active');
+            document.querySelector('.menu-toggle').classList.toggle('active');
+        }
+
+        function setLang(lang) {
+            if (lang === 'ru') {
+                document.querySelectorAll('.lang-ru').forEach(el => el.style.display = 'block');
+                document.querySelectorAll('.lang-uz').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('a.lang-ru').forEach(el => el.style.display = 'inline-block');
+            } else {
+                document.querySelectorAll('.lang-ru').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.lang-uz').forEach(el => el.style.display = 'block');
+                document.querySelectorAll('a.lang-uz').forEach(el => el.style.display = 'inline-block');
+            }
+        }
+        setLang('ru');
+    </script>
+</body>
+</html>
