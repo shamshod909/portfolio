@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Shamshod.dev</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body class="success-page">
+
+
+<div class="success-container">
+
+
+    {% if telegram_success %}
+
+        <!-- SUCCESS -->
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        {% if lang == "ru" %}
+
+            <h1>
+                Спасибо, {{ client_name }}!
+            </h1>
+
+            <p>
+                Ваша заявка успешно принята.
+                Я получил уведомление и свяжусь
+                с вами в ближайшее время.
+            </p>
+
+            <a href="/" class="btn">
+                Вернуться на сайт
+            </a>
+
+        {% else %}
+
+            <h1>
+                Rahmat, {{ client_name }}!
+            </h1>
+
+            <p>
+                Arizangiz muvaffaqiyatli qabul qilindi.
+                Men xabarnomani oldim va tez orada
+                siz bilan bog'lanaman.
+            </p>
+
+            <a href="/" class="btn">
+                Saytga qaytish
+            </a>
+
+        {% endif %}
+
+
+    {% else %}
+
+        <!-- ERROR -->
+
+        <div class="error-icon">
+            !
+        </div>
+
+
+        {% if lang == "ru" %}
+
+            <h1>
+                Что-то пошло не так
+            </h1>
+
+            <p>
+                Не удалось отправить заявку.
+                Попробуйте ещё раз.
+            </p>
+
+        {% else %}
+
+            <h1>
+                Xatolik yuz berdi
+            </h1>
+
+            <p>
+                Arizani yuborib bo'lmadi.
+                Iltimos, qayta urinib ko'ring.
+            </p>
+
+        {% endif %}
+
+
+        {% if error_message %}
+
+            <div class="error-details">
+                {{ error_message }}
+            </div>
+
+        {% endif %}
+
+
+        <a href="/" class="btn">
+            {% if lang == "ru" %}
+                Вернуться на сайт
+            {% else %}
+                Saytga qaytish
+            {% endif %}
+        </a>
+
+    {% endif %}
+
+
+</div>
+
+
+</body>
+</html>
